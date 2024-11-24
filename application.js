@@ -1,44 +1,46 @@
+var nomes = ["Gustavo", "Guilherme", "Luis Otávio", "Marcio"]
+var idade = [26, 28, 23, 40]
 
 
-// Variáveis no Java Script
-
-// var = Variável Global
-// let = Variável no escopo
-// const = Variável Constante (Não pode ser moodificada)
-
-var nome = "Rafael"
-
-nome = "Gustavo"
-
-console.log(nome)
+var pessoas = [["gustavo",26], ["guilherme",28], ["Luis Otávio", 23], ["Marcio", 40]]
 
 
-{
-    let idade = 24
-    console.log(idade)
-}
+var cidades = new Array ("São Paulo", "Campinas", "Osasco")
 
 
-const texto = "Meu nome é "+nome;
+console.log("Nomes --> "+nomes)
+
+console.log("Idade --> "+idade)
+
+console.log("Pessoas --> "+pessoas)
 
 
-console.log(texto)
+// acessando cada indice
 
-// Tipo de dados
-// String
-let n = "Gustavo"
-console.log("content: "+n+" type: string")
+console.log(nomes[0])
+console.log(nomes[1])
+console.log(nomes[2])
+console.log(nomes[3])
 
-// int
-let age = 26
-console.log("content: "+age+" type: int")
+console.log(idade[0])
+console.log(idade[1])
+console.log(idade[2])
+console.log(idade[3])
 
-// float
-let height = 1.75
-console.log("content: "+height+" type: float")
+console.log("Pessoas --> "+pessoas[0][0])
+console.log("Pessoas --> "+pessoas[0][1])
 
-// boolean
-let logged = false
-console.log("content: "+logged+" type: boolean")
+console.log("Pessoas --> "+pessoas[1][0])
+console.log("Pessoas --> "+pessoas[1][1])
+
+console.log("Pessoas --> "+pessoas[2][0])
+console.log("Pessoas --> "+pessoas[2][1])
+
+console.log("Pessoas --> "+pessoas[3][0])
+console.log("Pessoas --> "+pessoas[3][1])
 
 
+pessoas.push(["Lukas", 22])
+
+console.log("Pessoas --> "+pessoas[4][0])
+console.log("Pessoas --> "+pessoas[4][1])
