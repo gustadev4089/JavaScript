@@ -1,46 +1,29 @@
-var nomes = ["Gustavo", "Guilherme", "Luis Otávio", "Marcio"]
-var idade = [26, 28, 23, 40]
+
+var nome = "Marcio"
 
 
-var pessoas = [["gustavo",26], ["guilherme",28], ["Luis Otávio", 23], ["Marcio", 40]]
+
+if (nome == "Gustavo"){
+    console.log("Verdadeiro")
+}else{
+    console.log("Falso")
+}
 
 
-var cidades = new Array ("São Paulo", "Campinas", "Osasco")
+if (nome == "Guilherme"){
+    console.log("Verdadeiro")
+}else{
+    console.log("Falso")
+}
 
 
-console.log("Nomes --> "+nomes)
+if(nome == "Gustavo"){
+    console.log("Gustavo")
+}else if(nome == "Otávio"){
+    console.log("Otávio")
+}else if(nome == "Lukas"){
+    console.log("Lukas")
+}else{
+    console.log("Nenhum é igual")
+}
 
-console.log("Idade --> "+idade)
-
-console.log("Pessoas --> "+pessoas)
-
-
-// acessando cada indice
-
-console.log(nomes[0])
-console.log(nomes[1])
-console.log(nomes[2])
-console.log(nomes[3])
-
-console.log(idade[0])
-console.log(idade[1])
-console.log(idade[2])
-console.log(idade[3])
-
-console.log("Pessoas --> "+pessoas[0][0])
-console.log("Pessoas --> "+pessoas[0][1])
-
-console.log("Pessoas --> "+pessoas[1][0])
-console.log("Pessoas --> "+pessoas[1][1])
-
-console.log("Pessoas --> "+pessoas[2][0])
-console.log("Pessoas --> "+pessoas[2][1])
-
-console.log("Pessoas --> "+pessoas[3][0])
-console.log("Pessoas --> "+pessoas[3][1])
-
-
-pessoas.push(["Lukas", 22])
-
-console.log("Pessoas --> "+pessoas[4][0])
-console.log("Pessoas --> "+pessoas[4][1])
