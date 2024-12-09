@@ -22,3 +22,18 @@ function add_li(title, message){
 
     element_ul.innerHTML += `<li> <h3>${title}</h3> <p>${message}</p> </li>`
 }
+
+
+// Declarar uma função dentro de uma variável
+
+var conta = function(a, b){
+    return a + b
+}
+
+console.log(`Função conta --> ${conta(10, 50)}`);
+
+
+
+(function(){
+    console.log("Função chamada no momento que é declarada")
+})()
