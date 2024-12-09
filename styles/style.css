@@ -2,3 +2,137 @@
     padding: 0;
     margin: 0;
 }
+
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    width: 95%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+main > section{
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin: 20px auto;
+    align-content: center;
+}
+
+main > section:first-of-type{
+    border-right: 2px solid grey;
+}
+
+main .section1 div.field_login{
+    width: 80%;
+    padding: 10px;
+    background-color: #BCBCBC;
+    margin: 0 auto;
+    border-radius: 7px;
+}
+
+div.field_login header{
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+div.field_login header h2{
+    color: white;
+    font-weight: bold;
+}
+
+div.container_input{
+    margin-top: 20px;
+}
+
+div.container_input input[type=text]{
+    box-sizing: border-box;
+    display: block;
+    width: 250px;
+    height: 35px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 4px;
+}
+
+div.container_input input[type=text]:focus{
+    outline: none;
+}
+
+div.container_input textarea{
+    display: block;
+    box-sizing: border-box;
+    height: 140px;
+    width: 250px;
+    margin: 20px auto;
+    border-radius: 4px;
+    padding: 10px;
+    resize: none;
+}
+
+div.container_input textarea:focus{
+    outline: none;
+}
+
+div.container_input input[type=color]{
+    display: inline-block;
+    margin: 20px auto;
+    height: 50px;
+    width: 50px;
+}
+
+div.container_input .area_select_color{
+    text-align: center;
+}
+
+div.container_input .area_select_color span{
+    display: inline-block;
+    vertical-align: 85%;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+div.container_input > button{
+    display: block;
+    margin: 20px auto;
+    border: 2px solid gray;
+    background-color: royalblue;
+    height: 45px;
+    width: 198px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+div.container_input button span{
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+.section2 div.section2-content{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    height: 510px;
+    overflow: auto;
+}
+
+div.section2-content ul li{
+    margin: 20px 0;
+}
+
+div.section2-content h3{
+    margin-bottom: 20px;
+}
