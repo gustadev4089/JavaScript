@@ -1,14 +1,14 @@
 
 
-let nome = prompt("Informe seu nome ");
-let idade = prompt("Informe sua idade ");
-let sexo = prompt("Informe seu sexo (Masculino/Feminino)")
+let current = prompt("Informe o ano Atual");
+let born = prompt("Informe o ano do seu nascimento");
+let age = 0;
 
-
-my_people = {
-    nome: nome,
-    idade: idade,
-    sexo: sexo
+if (current > age){
+    age = current - born
+}else{
+    age = born - current
 }
 
-console.log(my_people)
+
+alert(`Sua idade atual é --> ${age}`)
