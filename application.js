@@ -1,11 +1,14 @@
 
-let lista_nomes = [
-    "Gustavo",
-    "Olavo",
-    "Mario",
-    "Rafael"
-];
 
-lista_nomes.forEach((nome, index)=>{
-    console.log(`Na posição ${index} tem o valor ${nome}`)
-})
+let nome = prompt("Informe seu nome ");
+let idade = prompt("Informe sua idade ");
+let sexo = prompt("Informe seu sexo (Masculino/Feminino)")
+
+
+my_people = {
+    nome: nome,
+    idade: idade,
+    sexo: sexo
+}
+
+console.log(my_people)
