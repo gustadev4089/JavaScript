@@ -1,25 +1,56 @@
-function Pessoa(nome, idade, masc){
-    this.nome = nome;
-    this.idade = idade;
-    this.sexo = masc == true ?"Masculino":"Feminino"
 
+class Pessoa{
+    constructor(nome, idade, is_masc){
+        this.nome = nome
+        this.idade = idade
+        this.sexo = is_masc ? "Mascule":"Female"
 
-    this.action_speak = (msg)=>{
-        console.log(`Hii, ${msg}`)
+        this.action_speaking = (msg)=>{
+            console.log(`Speaking --> ${msg}`)
+        }
+
+        this.action_listening = ()=>{
+            console.log(`I'm ${this.nome} and i'm listening...`)
+        }
     }
 
-    this.action_listening = ()=>{
-        console.log(`I'm ${this.nome} and to be listening... `)
+    
+}
+
+class Animal{
+    constructor(nome){
+        this.nome = nome;
+    }
+
+    printNome = ()=>{
+        return this.nome   
     }
 }
 
 
+class Cachorro extends Animal{
+    constructor(nome, tipo, raca){
+        // Invocando o constructor da Classe Animal
+        super(nome)
 
-addEventListener("load", ()=>{
-    let person_1 = new Pessoa("Gustavo", 24, true);
-    let person_2 = new Pessoa("Maria", 20, true);
+        this.tipo = tipo
+        this.raca = raca
+    }
+    
+    action_latir = ()=>{
+        return "AU AU AU !!!"
+    }
+}
 
-    person_1.action_speak("Can i ask you sometinhg? ")
+let pessoa_1 = new Pessoa("Gustavo", 25, true)
 
-    person_2.action_listening()
-})
+let pessoa_2 = new Pessoa("Maria", 24, false)
+
+pessoa_1.action_speaking("Hi, i'm trying to speak with you")
+
+pessoa_2.action_listening()
+
+
+let dog1 = new Cachorro("teddy", "cachorro", "chetsu")
+
+console.log(dog1)
