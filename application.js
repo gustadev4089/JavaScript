@@ -1,14 +1,29 @@
 
 
-let current = prompt("Informe o ano Atual");
-let born = prompt("Informe o ano do seu nascimento");
-let age = 0;
 
-if (current > age){
-    age = current - born
-}else{
-    age = born - current
-}
+window.addEventListener("load", ()=>{
+
+    let expression = ""
 
 
-alert(`Sua idade atual é --> ${age}`)
+    let termo_1 = prompt("Digite o primeiro termo")
+    let sinal = prompt("Digite o sinal")
+    let termo_2 = prompt("Digite o segundo termo")
+
+    expression = (termo_1+sinal+termo_2)
+
+    switch(sinal){
+        case "+":
+            console.log(`${expression} = ${(Number(termo_1))+(Number(termo_2))}`)
+            break;
+        case "-":
+            console.log(`${expression} = ${(Number(termo_1))-(Number(termo_2))}`)
+            break;
+        case "*":
+            console.log(`${expression} = ${(Number(termo_1))*(Number(termo_2))}`)
+            break;
+        case "/":
+            console.log(`${expression} = ${(Number(termo_1))/(Number(termo_2))}`)
+            break;
+    }
+})
