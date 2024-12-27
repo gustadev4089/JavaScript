@@ -1,7 +1,14 @@
+:root{
+    --color-text-noselected: rgb(235, 151, 151); 
+    --color-text-selected: white;
+}
+
+
 *{
     padding: 0;
     margin: 0;
 }
+
 
 
 html, body{
@@ -9,7 +16,52 @@ html, body{
     height: 100%;
 }
 
-p{
-    font-size: 30px;
-    font-weight: lighter;
+aside{
+    background-color: red;
+    height: 100%;
+    width: 120px;
+    position: fixed;
+    align-content: center;
+    left: -120px;
+    transition: 0.7s;
+}
+
+menu{
+    display: block;
+    text-align: center;
+    height: 80%;
+}
+
+div.button-close{
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 120px;
+    background-color: red;
+    height: 50px;
+    width: 33px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px; 
+}
+
+ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+li{
+    display: inline;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-text-noselected);
+    font-weight: 900;
+    font-size: 17px;
+}
+
+a:hover{
+    color: var(--color-text-selected);
 }
