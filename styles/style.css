@@ -1,6 +1,9 @@
 :root{
     --color-text-noselected: rgb(235, 151, 151); 
     --color-text-selected: white;
+
+    --menu-open: -120px;
+    --menu-close: 0px;
 }
 
 
@@ -8,8 +11,6 @@
     padding: 0;
     margin: 0;
 }
-
-
 
 html, body{
     width: 100%;
@@ -64,4 +65,35 @@ a{
 
 a:hover{
     color: var(--color-text-selected);
+}
+
+section.main-container{
+    width: 100%;
+    height: 100%;
+    
+}
+
+section div.header{
+    width: 76%;
+    padding-top: 40px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+section div.header span{
+    font-size: 16px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+section div.content{
+    width: 76%;
+    margin: 10px auto;
+    transition: 0.7s;
+}
+
+section div.content p{
+    transition: 1s;
+    height: 10px;
+    overflow: hidden;
 }
