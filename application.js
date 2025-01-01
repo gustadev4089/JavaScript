@@ -1,20 +1,38 @@
-let menu = document.getElementsByTagName("aside"); // Pegando todos da classe box
-let div_content = document.getElementsByClassName("content");
-let header_span = document.querySelector("section div.header span");
-let div_content_p = document.querySelector("section div.content p");
 
-window.addEventListener("click", (event)=>{
-    if(event.target.classList == "button-close"){
-        const styles_menu = getComputedStyle(menu[0]);
-        
-        menu[0].style.left = styles_menu.left == "-120px" ? "0" : "-120px";
-        div_content[0].style.width = styles_menu.left == "-120px" ? "60%" : "76%"
-        div_content[0].style.paddingLeft = styles_menu.left == "-120px" ? "100px" : "0";
-    }
+let img1 = document.querySelector("#img1");
+let img2 = document.querySelector("#img2");
+let img3 = document.querySelector("#img3");
 
-    if(event.target.id == "see-more"){
-        const div_content_style = getComputedStyle(div_content_p);
 
-        div_content_p.style.height = div_content_style.height == "10px" ? "200px" : "10px";
+let opt1 = document.querySelector("#option1");
+let opt2 = document.querySelector("#option2");
+let opt3 = document.querySelector("#option3");
+
+
+window.addEventListener("mouseover", (event)=>{
+    if(event.target.id == "option1"){
+        img1.style.opacity = 1;
+        img2.style.opacity = 0;
+        img3.style.opacity = 0;
+
+        opt1.style.backgroundColor = "rgb(61, 59, 59)";
+        opt2.style.backgroundColor = "dimgrey";
+        opt3.style.backgroundColor = "dimgrey";
+    }else if(event.target.id == "option2"){
+        img1.style.opacity = 0;
+        img2.style.opacity = 1;
+        img3.style.opacity = 0;
+
+        opt1.style.backgroundColor = "dimgrey";
+        opt2.style.backgroundColor = "rgb(61, 59, 59)";
+        opt3.style.backgroundColor = "dimgrey";
+    }else if(event.target.id == "option3"){
+        img1.style.opacity = 0;
+        img2.style.opacity = 0;
+        img3.style.opacity = 1;
+
+        opt1.style.backgroundColor = "dimgrey";
+        opt2.style.backgroundColor = "dimgrey";
+        opt3.style.backgroundColor = "rgb(61, 59, 59)";
     }
 })

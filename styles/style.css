@@ -1,9 +1,6 @@
 :root{
-    --color-text-noselected: rgb(235, 151, 151); 
-    --color-text-selected: white;
-
-    --menu-open: -120px;
-    --menu-close: 0px;
+    --width-img: 400px;
+    --height-img: 300px;
 }
 
 
@@ -17,83 +14,53 @@ html, body{
     height: 100%;
 }
 
-aside{
-    background-color: red;
-    height: 100%;
-    width: 120px;
-    position: fixed;
-    align-content: center;
-    left: -120px;
-    transition: 0.7s;
+div.container_img{
+    width: var(--width-img); 
+    height: var(--height-img);
 }
 
-menu{
-    display: block;
-    text-align: center;
-    height: 80%;
-}
-
-div.button-close{
-    display: block;
+div.container_img img{
     position: absolute;
-    top: 18px;
-    left: 120px;
-    background-color: red;
-    height: 50px;
-    width: 33px;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px; 
+    display: block;
+    top: 60px;
+    left: calc(50% - calc(var(--width-img)/2));
+    width: var(--width-img);
+    height: var(--height-img);
+    border-radius: 10px;
+    transition: 1s;
 }
 
-ul{
-    height: 100%;
+div.container_select{
     display: flex;
-    flex-direction: column;
+    position: relative;
+    margin: 100px auto;
+    width: 180px;
+    height: 50px;
     justify-content: space-around;
 }
 
-li{
-    display: inline;
+div.container_select > div{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: dimgrey;
 }
 
-a{
-    text-decoration: none;
-    color: var(--color-text-noselected);
-    font-weight: 900;
-    font-size: 17px;
+#option1{
+    background-color: rgb(61, 59, 59);
 }
 
-a:hover{
-    color: var(--color-text-selected);
+#img1{
+    opacity: 1;
 }
 
-section.main-container{
-    width: 100%;
-    height: 100%;
-    
+#img2{
+    opacity: 0;
 }
 
-section div.header{
-    width: 76%;
-    padding-top: 40px;
-    text-align: center;
-    margin: 0 auto;
+#img3{
+    opacity: 0;
 }
 
-section div.header span{
-    font-size: 16px;
-    font-style: italic;
-    cursor: pointer;
-}
 
-section div.content{
-    width: 76%;
-    margin: 10px auto;
-    transition: 0.7s;
-}
-
-section div.content p{
-    transition: 1s;
-    height: 10px;
-    overflow: hidden;
-}
