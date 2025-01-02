@@ -1,38 +1,25 @@
 
-let img1 = document.querySelector("#img1");
-let img2 = document.querySelector("#img2");
-let img3 = document.querySelector("#img3");
+
+var list_name = ["Gustavo", "Guilherme", "Otávio", "Marcio"];
 
 
-let opt1 = document.querySelector("#option1");
-let opt2 = document.querySelector("#option2");
-let opt3 = document.querySelector("#option3");
+let [people1, people2, people3, people4] = list_name;
 
 
-window.addEventListener("mouseover", (event)=>{
-    if(event.target.id == "option1"){
-        img1.style.opacity = 1;
-        img2.style.opacity = 0;
-        img3.style.opacity = 0;
+console.log(people1);
+console.log(people2);
+console.log(people3);
+console.log(people4);
 
-        opt1.style.backgroundColor = "rgb(61, 59, 59)";
-        opt2.style.backgroundColor = "dimgrey";
-        opt3.style.backgroundColor = "dimgrey";
-    }else if(event.target.id == "option2"){
-        img1.style.opacity = 0;
-        img2.style.opacity = 1;
-        img3.style.opacity = 0;
+let pessoa = {
+    nome: "Gustavo",
+    idade: 26,
+    rg: "54.582.574-X",
+    sexo: "masculino",
+}
 
-        opt1.style.backgroundColor = "dimgrey";
-        opt2.style.backgroundColor = "rgb(61, 59, 59)";
-        opt3.style.backgroundColor = "dimgrey";
-    }else if(event.target.id == "option3"){
-        img1.style.opacity = 0;
-        img2.style.opacity = 0;
-        img3.style.opacity = 1;
 
-        opt1.style.backgroundColor = "dimgrey";
-        opt2.style.backgroundColor = "dimgrey";
-        opt3.style.backgroundColor = "rgb(61, 59, 59)";
-    }
-})
+let {nome, idade, rg, sexo} = pessoa;
+
+
+console.log(`${nome} -- ${idade} -- ${rg} -- ${sexo}`);
