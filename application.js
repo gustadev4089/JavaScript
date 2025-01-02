@@ -1,25 +1,40 @@
 
+// Spread com uma lista simples
 
-var list_name = ["Gustavo", "Guilherme", "Otávio", "Marcio"];
+let convidados = ["Gustavo", "Pedro", "Marcio"];
+let novos = ["Matheus", "Otavio", "Marlene", "Miranda"];
+
+let total_pessoas = [...novos, "Maria", "Leticia", "Marcelo", ...convidados];
+
+console.log(total_pessoas);
 
 
-let [people1, people2, people3, people4] = list_name;
+// Spread com lista de objetos
+
+let pessoas_antigas = [
+    {nome: "Marcia", idade: 34, sexo: "feminino"},
+    {nome: "Luiz", idade: 23, sexo: "masculino"},
+    {nome: "Sandra", idade: 30, sexo: "feminino"},
+    {nome: "Marco", idade: 45, sexo: "masculino"},
+]
+
+let nova_lista = [
+    ...pessoas_antigas,
+    {nome: "Mario", idade: 21, sexo: "masculino"},
+    {nome: "Sabino", idade: 60, sexo: "masculino"},
+    {nome: "Leticia", idade: 26, sexo: "feminino"},
+    {nome: "Carla", idade: 28, sexo: "feminino"},
+]
+
+console.log(nova_lista)
 
 
-console.log(people1);
-console.log(people2);
-console.log(people3);
-console.log(people4);
 
-let pessoa = {
-    nome: "Gustavo",
-    idade: 26,
-    rg: "54.582.574-X",
-    sexo: "masculino",
+// Rest
+
+const show_convidados = (pessoa, ...outros)=>{
+    let total = [pessoa, ...outros];
+    console.log(`Lista de convidados: ${total}`);
 }
 
-
-let {nome, idade, rg, sexo} = pessoa;
-
-
-console.log(`${nome} -- ${idade} -- ${rg} -- ${sexo}`);
+show_convidados("marcio", "Malvino", "Pedro", "Augustus", "Maximos");
